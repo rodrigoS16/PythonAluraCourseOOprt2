@@ -1,5 +1,12 @@
 #  modelo é utilizado para criação de conceitos de classes
 #  para representar dominios no sistema
+#  from abc import ABC # abstract base class   o pacote de todas as ABCs criadas é o collections.abc
+
+# from abc import ABCMeta, abstractmethod
+# class Programa(metaclass = ABCMeta):
+#    @abstractmethod
+#    def __str__(self):
+#        pass
 
 
 class Programa:
@@ -55,7 +62,7 @@ class Serie(Programa):
 
 
 class Playlist():
-    def __init__(self, nome_playList, programas):   # dunder é o nome do metodo com 2 " _ "
+    def __init__(self, nome_playList, programas):  # dunder é o nome do metodo com 2 " _ "
         self.nome = nome_playList
         self._programas = programas
 
@@ -75,11 +82,11 @@ atlanta = Serie("Atlanta", 2015, 3)
 temp = Filme("Todo mundo em panico", 1999, 100)
 demolidor = Serie("Demolidor", 2016, 2)
 
-#print(vingadores)
+# print(vingadores)
 vingadores.give_like()
 vingadores.give_like()
 
-#print(atlanta)
+# print(atlanta)
 atlanta.give_like()
 atlanta.give_like()
 atlanta.give_like()
@@ -89,7 +96,6 @@ temp.give_like()
 demolidor.give_like()
 demolidor.give_like()
 demolidor.give_like()
-
 
 playlist_fim_de_Semana = Playlist('Fim de semana', [vingadores, atlanta, demolidor, temp])
 
